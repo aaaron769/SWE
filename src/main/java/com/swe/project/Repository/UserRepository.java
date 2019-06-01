@@ -1,4 +1,11 @@
 package com.swe.project.Repository;
 
-public interface UserRepository {
+import com.swe.project.Entity.UserEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UserRepository extends JpaRepository<UserEntity, Integer> {
+
+    UserEntity findByEmailEquals(String email);
+
+    Integer countByEmail(String email);
 }
