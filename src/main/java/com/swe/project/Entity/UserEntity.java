@@ -1,7 +1,7 @@
 package com.swe.project.Entity;
 
 import javax.persistence.*;
-// the User Entity
+// this is the Entity of the user
 @Entity
 @Table(name = "user")
 public class UserEntity {
